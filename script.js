@@ -20,4 +20,32 @@ class IdeaGenerator {
     this.displaySavedIdeas();
     this.populateCategories();
     }
+
+    getRandomIdea(category) {
+        let filteredIdeas = this.ideas;
+        if (category) {
+            filteredIdeas = this.ideas.filter(idea => idea.category === category);
+        }
+        if (filteredIdeas.length === 0) {
+            return { text: "Нет идей в этой категории.", category: "" };
+        }
+        const randomIndex = Math.floor(Math.random() * filteredIdeas.length);
+        return filteredIdeas[randomIndex];
+    }
+
+    generateAndDisplayIdea() {
+        const selectedCategory = this.categorySelectElement.value;
+        this.currentIdea = this.getRandomIdea(selectedCategory);
+        this.ideaTextElement.textContent = this.currentIdea.text;
+    }
+
+    saveCurrentIdea() {
+        if (this.currentIdea && !this.savedIdeas.includes(this.currentIdea.text)) {
+            this.savedIdeas.push(this.currentIdea.text);
+            this.updateSavedIdeas();
+            this.displaySavedIdeas();
+        }
+    }
 }
+
+   
