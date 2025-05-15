@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор идеи</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Генератор идей для досуга</h1>
+        <div class="input-area">
+            <input type="text" id="ideaInput" placeholder="Введите вашу идею">
+            <input type="text" id="categoryInput" placeholder="Введите категорию">
+            <button id="addIdeaButton">Добавить идею</button>
+        </div>
+        <div class="idea-container">
+            <select id="categorySelect">
+                <option value="">Все категории</option>
+            </select>
+            <button id="generateButton">Сгенерировать идею</button>
+            <p id="ideaText"></p>
+            <button id="saveIdeaButton">Сохранить</button>
+            <button id="clearSavedButton">Очистить сохраненные идеи</button>
+        </div>
+        <h2>Сохраненные идеи</h2>
+        <ul id="savedIdeasList"></ul>
+    </div>
+    
+</body>
+</html>
