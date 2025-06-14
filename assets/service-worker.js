@@ -1,12 +1,14 @@
 const CACHE_NAME = 'leisure-ideas-cache-v1';
 const urlsToCache = [
   '/',
-  '/index.html',
-  '/style.css',
-  '/script.js',
-  '/manifest.json',
-  //'/icon-192x192.png',  //Убедитесь, что эти иконки существуют.
-  //'/icon-512x512.png'
+  './assets',
+  './assets/index.html',
+  './assets/style.css',
+  './assets/script.js',
+  './assets/manifest.json',
+  './assets/service-worker',
+  './assets/images', 
+  './assets/images/icon.ideas.png', 
 ];
 
 // Установка Service Worker

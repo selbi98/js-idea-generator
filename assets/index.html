@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Генератор идей для досуга</h1>
+        <h1>Генератор идей для досуга!</h1>
         <div class="input-area">
             <input type="text" id="ideaInput" placeholder="Введите вашу идею">
             <input type="text" id="categoryInput" placeholder="Введите категорию">
@@ -30,6 +30,16 @@
         <h2>Сохраненные идеи</h2>
         <ul id="savedIdeasList"></ul>
     </div>
-    
+    <script>
+        if ('serviceWorker' in navigator) {
+navigator.serviceWorker.register('./assets/service-worker.js')
+.then(function(registration) {
+console.log('Service Worker зарегистрирован:', registration);
+})
+.catch(function(error) {
+console.error('Ошибка регистрации Service Worker:', error);
+});
+}
+    </script>
 </body>
 </html>

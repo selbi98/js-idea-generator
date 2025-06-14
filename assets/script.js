@@ -9,14 +9,14 @@ class IdeaGenerator {
         this.addIdeaButtonElement = addIdeaButtonElement;
         this.ideaInput = ideaInput;
         this.categoryInput = categoryInput;
-        this.clearSavedButtonElement = clearSavedButtonElement; // Сохраняем элемент
+        this.clearSavedButtonElement = clearSavedButtonElement; 
         this.savedIdeas = this.loadSavedIdeas();
         this.currentIdea = null;
 
         this.generateButtonElement.addEventListener('click', this.generateAndDisplayIdea.bind(this));
         this.saveIdeaButtonElement.addEventListener('click', this.saveCurrentIdea.bind(this));
         this.addIdeaButtonElement.addEventListener('click', this.addIdea.bind(this));
-        this.clearSavedButtonElement.addEventListener('click', this.clearSavedIdeas.bind(this)); // Добавляем обработчик для новой кнопки
+        this.clearSavedButtonElement.addEventListener('click', this.clearSavedIdeas.bind(this)); 
         this.displaySavedIdeas();
         this.populateCategories();
     }
@@ -97,10 +97,10 @@ class IdeaGenerator {
         this.categoryInput.value = '';
     }
 
-    clearSavedIdeas() { // Новый метод для очистки сохраненных идей
-        this.savedIdeas = []; // Очищаем массив
-        this.updateSavedIdeas(); // Обновляем localStorage
-        this.displaySavedIdeas(); // Обновляем отображение
+    clearSavedIdeas() { 
+        this.savedIdeas = []; 
+        this.updateSavedIdeas(); 
+        this.displaySavedIdeas(); 
     }
 }
 
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const addIdeaButtonElement = document.getElementById('addIdeaButton');
             const ideaInput = document.getElementById('ideaInput');
             const categoryInput = document.getElementById('categoryInput');
-            const clearSavedButtonElement = document.getElementById('clearSavedButton'); // Получаем элемент кнопки "Очистить"
+            const clearSavedButtonElement = document.getElementById('clearSavedButton'); 
 
 
             const generator = new IdeaGenerator(ideasData, ideaTextElement, generateButtonElement, saveIdeaButtonElement, savedIdeasListElement, categorySelectElement, addIdeaButtonElement, ideaInput, categoryInput, clearSavedButtonElement); // Передаем новый элемент в конструктор
