@@ -106,9 +106,9 @@ class IdeaGenerator {
 
 document.addEventListener('DOMContentLoaded', () => {
     const ideasData = [
-        { text: "Сделать зарядку или короткую тренировку.", category: "Активность" },
-        { text: "Погулять в ближайшем парке или на улице.", category: "Активность" },
-        { text: "Почитать книгу интересного жанра.", category: "Досуг" },
+        { text: "kicijek trenirofka etmek yada mask.", category: "Активность" },
+        { text: "Parkda aylanmak.", category: "Активность" },
+        { text: "kitap okamak.", category: "Досуг" },
         { text: "Посмотреть серию любимого сериала или новый фильм.", category: "Досуг" },
         { text: "Послушать спокойную музыку или подкаст.", category: "Досуг" },
         { text: "Приготовить что-нибудь вкусное по новому рецепту.", category: "Творчество" },

@@ -11,7 +11,6 @@ const urlsToCache = [
   './assets/images/icon.ideas.png', 
 ];
 
-// Установка Service Worker
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -22,7 +21,6 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Обработка запросов
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
