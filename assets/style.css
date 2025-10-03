@@ -132,3 +132,92 @@ body {
     -ms-user-select: none;
     user-select: none;
 }
+@media (max-width: 768px) {
+    .container {
+       
+        padding: 15px;
+    }
+
+    h1 {
+    
+        font-size: 40px;
+    }
+    
+   
+    .idea-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px; 
+    }
+
+    .idea-container button,
+    .idea-container select {
+        width: 48%; 
+        max-width: none;
+    }
+
+   
+    .idea-container p {
+        width: 100%;
+        max-width: 100%;
+        order: -1; 
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        
+        font-size: 30px;
+    }
+
+    
+    .input-area {
+        flex-direction: column;
+    }
+
+    
+    .input-area input,
+    .input-area button {
+        width: 100%;
+        max-width: 100%; 
+        margin: 5px 0; 
+    }
+    
+
+    .idea-container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .idea-container button,
+    .idea-container select,
+    .idea-container p {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+
+    .idea-container select {
+         margin-bottom: 10px;
+    }
+
+    .idea-container p {
+        order: -3; 
+    }
+    .idea-container select {
+        order: -2; 
+    }
+    .idea-container button {
+        order: 0; 
+    }
+    
+    #clearSavedButton {
+        margin-top: 20px;
+    }
+
+    #savedIdeasList {
+        max-width: 100%;
+    }
+}
